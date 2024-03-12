@@ -19,7 +19,22 @@ int main()
     cout << "Enter rating for featured movie: ";
     cin >> numStars; 
     			
-    // Write while loop here    
+    // Write while loop here   
+
+    while (numStars >= 0) {
+    totalStars += numStars;
+    numPatrons++;
+    
+    cout << "Enter rating for featured movie: ";
+    cin >> numStars;
+
+    }
+
+    if (numPatrons > 0) {
+    averageStars = totalStars / numPatrons;
+    } else {
+    averageStars = 0;
+    } 
 
     cout << "Average Star Value: " << averageStars << endl; 
     return 0;
