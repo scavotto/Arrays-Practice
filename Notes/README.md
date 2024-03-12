@@ -339,3 +339,43 @@ double average = static_cast<double>(sum) / numStudents;
 This code iterates over the array, adding up all the ages, and then calculates the average by dividing the sum by the number of students.
 
 So, in summary, arrays provide a more organized, efficient, and flexible way to store and work with collections of related values compared to using separate variables and if statements. They simplify your code and enable you to perform operations on multiple elements easily using loops.
+
+## Using a For Loop
+
+A while loop repeats a block of code as long as a condition is true. In this program, we want the loop to keep running until the theater manager enters a negative number.
+
+We can use a sentinel value to control the loop. A sentinel is a special value that signals the end of input. In this case, the sentinel is any negative number.
+
+Here's how you can write the while loop:
+
+```cpp
+while (numStars >= 0) {
+    totalStars += numStars;
+    numPatrons++;
+
+    cout << "Enter rating for featured movie: ";
+    cin >> numStars;
+}
+```
+
+The loop condition `numStars >= 0` checks if the entered rating is non-negative. As long as this condition is true, the loop keeps executing.
+
+Inside the loop, we add the current `numStars` to the `totalStars` to keep a running total of all the ratings. We also increment `numPatrons` to count the number of patrons who have rated the movie.
+
+At the end of each iteration, we prompt for the next rating. This is important because it allows the loop to continue with the next iteration or exit if a negative number is entered.
+
+After the loop ends, we can calculate the average rating:
+
+```cpp
+if (numPatrons > 0) {
+    averageStars = totalStars / numPatrons;
+} else {
+    averageStars = 0;
+}
+```
+
+We first check if there were any patrons (`numPatrons > 0`). If so, we calculate the average by dividing `totalStars` by `numPatrons`. If there were no patrons, we set `averageStars` to 0 to avoid dividing by zero.
+
+Finally, we display the average star rating.
+
+So, the sentinel-controlled while loop allows us to keep accepting ratings until a special value (negative number) is entered, at which point the loop stops, and we can calculate and display the results.
