@@ -292,7 +292,7 @@ Iterate over the array, prompting user input for each element.
 Then, if you wanted to print out the age of a specific student, you'd need to use an if statement to check which student number it is:
 
 ```cpp
-cppCopy codeif (studentNumber == 1) {
+if (studentNumber == 1) {
     cout << student1Age;
 } else if (studentNumber == 2) {
     cout << student2Age;
@@ -308,7 +308,7 @@ As you can see, this approach quickly becomes cumbersome and inefficient as the 
 This is where arrays come in handy. With an array, you can store all the student ages under a single variable name, like this:
 
 ```cpp
-cppCopy codeint studentAges[numStudents];
+int studentAges[numStudents];
 
 ```
 
@@ -317,7 +317,7 @@ Here, `numStudents` is the number of students in the class. Now, instead of crea
 To access or modify a specific student's age, you can simply use the array indexing operator `[]` with the appropriate index. For example:
 
 ```cpp
-cppCopy codecout << studentAges[studentNumber - 1];
+cout << studentAges[studentNumber - 1];
 
 ```
 
@@ -328,7 +328,7 @@ Using arrays eliminates the need for lengthy if statements to access individual 
 Moreover, arrays allow you to perform operations on multiple elements easily using loops. For example, you can calculate the average age of all students like this:
 
 ```cpp
-cppCopy codeint sum = 0;
+int sum = 0;
 for (int i = 0; i < numStudents; i++) {
     sum += studentAges[i];
 }
