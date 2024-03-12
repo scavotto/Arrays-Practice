@@ -47,3 +47,55 @@ for name in student-names:
 ```
 
 Arrays are crucial in programming, allowing for efficient data storage and manipulation.
+
+## Populating a List
+
+To populate an array:
+
+1. **Declare an Array**
+
+```cpp
+int studentAges[5]; // Array of 5 integers
+```
+
+Here, `studentAges` can store 5 integer values.
+
+2. **Initialize the Array**
+
+```cpp
+int studentAges[5] = {18, 20, 19, 21, 22}; // Initialized with values
+```
+
+Values are assigned to array elements in order, starting from index 0.
+
+3. **Access Array Elements**
+
+```cpp
+cout << studentAges[2]; // Output: 19
+```
+
+Retrieve specific elements using their index.
+
+4. **Modify Array Elements**
+
+```cpp
+studentAges[3] = 23; // Change value at index 3 to 23
+```
+
+Assign a new value to an element using its index.
+
+5. **Populate Array Using a Loop**
+
+Use a loop to input values dynamically:
+
+```cpp
+for (int i = 0; i < 5; i++) {
+
+cout << "Enter age for student " << i + 1 << ": ";
+
+cin >> studentAges[i];
+
+}
+```
+
+Iterate over the array, prompting user input for each element.
