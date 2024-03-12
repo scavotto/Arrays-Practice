@@ -1,6 +1,6 @@
 # Arrays - Part 1
 
-## How Arrays Work
+## Storing Multiple Values Under a Single Name Using Arrays
 
 In programming, an array stores multiple values under one name, like grouping variables. Without arrays, each value requires a separate variable. 
 
