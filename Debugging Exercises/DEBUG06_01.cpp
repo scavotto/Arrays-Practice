@@ -31,14 +31,17 @@ start
 
       collectedArray[year-1] = collectedArray[year-1] + cans
 
-      output "Enter year of student or ", QUIT, " to quit "
+      output "Enter year of student (1-4) or ", QUIT, " to quit "
       input year
    endwhile
+
    output HEAD1
    output HEAD2
-   year = 1
+
+   year = 0
    while year < SIZE
-      output year, collectedArray[year]
+      output year + 1, collectedArray[year]
       year = year + 1
    endwhile
+   
 stop         
