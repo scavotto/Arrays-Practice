@@ -11,7 +11,7 @@ start
       num cans
       num SIZE = 4
       num QUIT = 9
-      num collectedArray[SIZE] = 0, 0, 0
+      num collectedArray[4] = 0, 0, 0, 0
       string HEAD1 = "Can Recycling Report"
       string HEAD2 = "Year      Cans Collected"
    output "Enter year of student or ", QUIT, " to quit "
