@@ -21,10 +21,16 @@ start
         output "Invaid year. Please enter a value between 1 and 4."
         continue
     endif
-    
+
       output "Enter number of cans collected "
       input cans
-      collectedArray[year] = collectedArray[year] + cans
+      while can < 0
+        output "Invalid input. Please enter a non-negative integer."
+        input cans
+      endwhile     
+
+      collectedArray[year-1] = collectedArray[year-1] + cans
+
       output "Enter year of student or ", QUIT, " to quit "
       input year
    endwhile
