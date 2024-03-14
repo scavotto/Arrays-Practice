@@ -1,2 +1,8 @@
 
 .vscode/settings.json
+Debugging Exercises/build/Debug/outDebug
+.vscode/c_cpp_properties.json
+*.json
+Chapter 6 C++ Lab: 6-1 Array Basics/LAB06_01.cpp
+Debugging Exercises/build/Debug/DEBUG06_01.o
+Debugging Exercises/DEBUG06_01

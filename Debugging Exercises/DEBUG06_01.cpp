@@ -21,35 +21,38 @@ int main() {
       string HEAD1 = "Can Recycling Report";
       string HEAD2 = "Year Cans Collected";
 
-   output "Enter year of student (1-4) or ", QUIT, " to quit "
-   input year
-   while year <> QUIT
-    if year < 1 or year > 4
-        output "Invaid year. Please enter a value between 1 and 4."
-        continue
-    endif
+   cout << "Enter year of student (1-4) or " << QUIT << " to quit ";
+   cin >> year;
 
-      output "Enter number of cans collected "
-      input cans
-      while can < 0
-        output "Invalid input. Please enter a non-negative integer."
-        input cans
-      endwhile     
+    while (year != QUIT) {
+        if (year < 1 || year > 4) {
+            cout << "Invalid year. Please enter a value between 1 and 4." << endl;
+            cout << "Enter year of student (1-4) or " << QUIT << " to quit ";
+            cin >> year;
+            continue;
+        }
 
-      collectedArray[year-1] = collectedArray[year-1] + cans
+        cout << "Enter number of cans collected (non-negative integer) ";
+        cin >> cans;
+        while (cans < 0) {
+            cout << "Invalid input. Please enter a non-negative integer." << endl;
+            cin >> cans;
+        } 
 
-      output "Enter year of student (1-4) or ", QUIT, " to quit "
-      input year
-   endwhile
+        collectedArray[year - 1] = collectedArray[year - 1] + cans;
 
-   output HEAD1
-   output HEAD2
+        cout << "Enter year of student (1-4) or " << QUIT << " to quit ";
+        cin >> year;
+    }
 
-   year = 0
-   while year < SIZE
-      output year + 1, collectedArray[year]
-      year = year + 1
-   endwhile
+    cout << HEAD1 << endl;
+    cout << HEAD2 << endl;
 
-stop         
+    year = 0;
+    while (year < SIZE) {
+        cout << year + 1 << " " << collectedArray[year] << endl;
+        year = year + 1;
+    }
+
+    return 0;
 }
