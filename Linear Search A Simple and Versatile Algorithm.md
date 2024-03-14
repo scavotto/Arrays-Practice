@@ -1,7 +1,5 @@
 # Linear Search: A Simple and Versatile Algorithm
 
-Favorite: No
-Archived: No
 
 ## Introduction
 
