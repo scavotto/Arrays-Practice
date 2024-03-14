@@ -14,9 +14,14 @@ start
       num collectedArray[4] = 0, 0, 0, 0
       string HEAD1 = "Can Recycling Report"
       string HEAD2 = "Year      Cans Collected"
-   output "Enter year of student or ", QUIT, " to quit "
+   output "Enter year of student (1-4) or ", QUIT, " to quit "
    input year
    while year <> QUIT
+    if year < 1 or year > 4
+        output "Invaid year. Please enter a value between 1 and 4."
+        continue
+    endif
+    
       output "Enter number of cans collected "
       input cans
       collectedArray[year] = collectedArray[year] + cans
